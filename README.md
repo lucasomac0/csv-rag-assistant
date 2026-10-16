@@ -18,7 +18,7 @@ Funciona com dois provedores de LLM, à sua escolha:
 | Provedor | Custo | Onde roda | Requisito |
 |---|---|---|---|
 | `gemini` | Gratuito (free tier) | Nuvem (API do Google) | Chave de API do Google AI Studio |
-| `ollama` | Gratuito | 100% local, na sua máquina | [Ollama](https://ollama.com) instalado + modelo baixado (ex: Llama 3) |
+| `ollama` | Gratuito | 100% local | [Ollama](https://ollama.com) instalado + modelo baixado |
 
 ## Estrutura do projeto
 
@@ -69,16 +69,14 @@ cp .env.example .env
    python rag_csv.py
    ```
 
-> Modelos da API do Gemini mudam de nome com frequência. O script usa por
-> padrão `gemini-flash-latest`, que sempre aponta para o Flash mais recente
-> disponível no free tier. Se quiser travar em uma versão específica, defina
-> `GEMINI_CHAT_MODEL` no `.env` (veja a lista atual em
-> [ai.google.dev/gemini-api/docs/models](https://ai.google.dev/gemini-api/docs/models)).
+> O script usa por padrão `gemini-flash-latest`, que sempre aponta para o Flash mais recente
+> disponível no free tier. Se quiser escolher uma versão específica, defina
+> `GEMINI_CHAT_MODEL` no `.env`.
 
-### Opção B: usando Ollama (100% local, sem enviar dados para fora)
+### Opção B: usando Ollama (local)
 
 1. Instale o [Ollama](https://ollama.com/download).
-2. Baixe um modelo (ex: Llama 3):
+2. Verifique as configurações da sua máquina e escolha um modelo adequado (ex: Llama 3):
    ```bash
    ollama pull llama3
    ```
