@@ -151,4 +151,4 @@ recriar o índice vetorial.
 
 ## Licença
 
-Sinta-se livre para usar, modificar e adaptar este projeto (ex: licença MIT).
+Sinta-se livre para usar, modificar e adaptar este projeto (licença MIT).
